@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <header id="opening" style="text-align: center;">
+        <h1>Quiz Challenge</h1>
+        <button id="start">
+            <h2>Click to begin!</h2>
+        </button>
+    </header>
+    <h3 id ="timer" style ="text-align: end;"></h3>
+    <section id="first-q">
+        <article>
+            <h1>
+                #1: Commonly used data types do not include:
+            </h1>
+            <div id="first-answers">
+                <button class = "wrong" data-state="wrong">
+                    <h2>Strings</h2>
+                </button>
+                <button class = "wrong" data-state="wrong">
+                    <h2>Booleans</h2>
+                </button>
+                <button class="wrong" datastate="wrong">
+                    <h2>Numbers</h2>
+                </button>
+                <button class="correct" value="5" data-state="corect">
+                    <h2>Alerts</h2>
+                </button>
+            </div>
+
+
+        </article>
+    </section>
+    <section id="second-q">
+        <article>
+            <div id="second-answers">
+                <h1>Arrays in Javascript can be used to store _____</h1>
+                <button class="wrong" data-state="wrong">
+                    <h2>Numbers and Strings</h2>
+                </button>
+                <button class="wrong" data-state="wrong">
+                    <h2>Other Arrays</h2>
+                </button>
+                <button class="wrong" data-state="wrong">
+                    <h2>Booleans</h2>
+                </button>
+                <button class="correct" value="5" data-state="correct">
+                    <h2>All of the Above</h2>
+                </button>
+            </div>
+
+        </article>
+    </section>
+    <section id="third-q">
+        <article>
+            <div id="third-answers">
+                <h1>String values must be enclosed within _____ when being assigned to variables</h1>
+                <button class = "wrong" data-state="wrong">
+                    <h2>commas</h2>
+                </button class="wrong" data-state="wrong">
+                <h2>curly-branches</h2>
+                <button class="correct" data-state="correct">
+                    <h2>quotes</h2>
+                </button>
+                <button class="wrong" value="5" data-state="wrong">
+                    <h2>parentheses</h2>
+                </button>
+
+            </div>
+
+
+        </article>
+    </section>
+    <div id="results">
+        <p>Score <span id="hs">0</span></p>
+    </div>
+    
+    
+    <script src= "script.js"></script>
+</body>
+
+</html>
