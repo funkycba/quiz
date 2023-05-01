@@ -26,13 +26,13 @@
                 <button class = "wrong" data-state="wrong">
                     <h2>Strings</h2>
                 </button>
-                <button class = "wrong" data-state="wrong">
+                <button class = "wrong" id="one-b" data-state="wrong">
                     <h2>Booleans</h2>
                 </button>
-                <button class="wrong" datastate="wrong">
+                <button class="wrong" id="one-c"datastate="wrong">
                     <h2>Numbers</h2>
                 </button>
-                <button class="correct" value="5" data-state="corect">
+                <button class="correct" value="5" data-state="correct">
                     <h2>Alerts</h2>
                 </button>
             </div>
@@ -44,16 +44,16 @@
         <article>
             <div id="second-answers">
                 <h1>Arrays in Javascript can be used to store _____</h1>
-                <button class="wrong" data-state="wrong">
+                <button class="wrong" id="two-a" data-state="wrong">
                     <h2>Numbers and Strings</h2>
                 </button>
-                <button class="wrong" data-state="wrong">
+                <button class="wrong" id="two-b" data-state="wrong">
                     <h2>Other Arrays</h2>
                 </button>
-                <button class="wrong" data-state="wrong">
+                <button class="wrong" id="two-c" data-state="wrong">
                     <h2>Booleans</h2>
                 </button>
-                <button class="correct" value="5" data-state="correct">
+                <button class="correct" id="correct-two" value="5" data-state="correct">
                     <h2>All of the Above</h2>
                 </button>
             </div>
@@ -64,14 +64,15 @@
         <article>
             <div id="third-answers">
                 <h1>String values must be enclosed within _____ when being assigned to variables</h1>
-                <button class = "wrong" data-state="wrong">
+                <button class = "wrong" id="three-a" data-state="wrong">
                     <h2>commas</h2>
-                </button class="wrong" data-state="wrong">
-                <h2>curly-branches</h2>
-                <button class="correct" data-state="correct">
+                </button>
+                <button class = "wrong" id="three-b" data-state="wrong"><h2>curly-branches</h2></button>
+                
+                <button class="correct" id="final-ans" data-state="correct">
                     <h2>quotes</h2>
                 </button>
-                <button class="wrong" value="5" data-state="wrong">
+                <button class="wrong" value="5" id="three-c" data-state="wrong">
                     <h2>parentheses</h2>
                 </button>
 
@@ -81,7 +82,8 @@
         </article>
     </section>
     <div id="results">
-        <p>Score <span id="hs">0</span></p>
+        <p>Score <span id="hs" value="0"></span></p>
+        <button id="redo">Reset</button>
     </div>
     
     

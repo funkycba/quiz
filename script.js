@@ -44,10 +44,21 @@ var pageThree = document.querySelector("#third-q").style.display = 'none'
 console.log(pageOne);
 console.log(pageTwo);
 console.log(pageThree);
-var wrongEl = document.querySelector(".wrong")
+var finalAns = document.querySelector("#final-ans");
+var wrongEl = document.querySelector(".wrong");
 var scoreEl = document.querySelector("#hs");
-var correctEl = document.querySelector(".correct")
+var correctEl = document.querySelector(".correct");
 points = localStorage.getItem("points");
+var wrongSec = document.querySelector("#one-b");
+var wrongThi = document.querySelector("#one-c");
+var wrongFor = document.querySelector("#two-a");
+var wrongFif = document.querySelector("#two-b");
+var wrongSix = document.querySelector("#two-c");
+var wrongSev = document.querySelector("#three-a");
+var wrongEig = document.querySelector("#three-b");
+var wrongNin = document.querySelector("#three-c");
+secAnswer = document.querySelector("#correct-two");
+var reset = document.querySelector("#redo");
 function setCounterText() {
     scoreEl.textContent = points;
 }
@@ -66,7 +77,6 @@ function revealThird(){
 /*Use 'display = none' to go from page to page*/
 startEl.addEventListener("click", revealFirst);
 console.log(startEl);
-    
 
 
 var timeEl = document.querySelector("#timer");
@@ -84,17 +94,29 @@ function setTime() {
         }
     }, 1000)
 }
+var currentScore = 0
+secAnswer.addEventListener("click", function(){
+    revealThird();
+    addScore();
+}
+)
+
 function addScore() {
-    scoreEl = scoreEl + 5
-    scoreEl.textContent;
+    currentScore = currentScore + 5;
+    scoreEl.textContent = currentScore;
 
 }
+finalAns.addEventListener("click", function(){
+    addScore();
+    revealResults();
+})
 console.log(scoreEl);
 correctEl.addEventListener("click", function(){
-    revealSecond()
-    addScore()
-    if (pageTwo.style.display = 'block')
-    revealThird()
+    revealSecond();
+    addScore();
+    console.log("pageTwo.style.display");
+    //if (document.getElementById("second-q").style.display === 'block')
+    
 
 
 })
@@ -102,15 +124,50 @@ console.log(correctEl);
 console.log(timeEl);
 /*Create a function for the buttons that deducts time*/
 wrongEl.addEventListener("click", function() {
-    timeRemain = timeRemain - 5;
+    timeRemain = timeRemain - 10;
     timeEl.textContent = timeRemain + "left until game over";
+})
+
+function reduceTime(){
+    timeRemain = timeRemain - 10;
+    timeEl.textContent = timeRemain + "left until game over";
+}
+wrongSec.addEventListener("click", function(){
+    reduceTime();
+})
+wrongThi.addEventListener("click", function(){
+    reduceTime();
+})
+wrongFor.addEventListener("click", function(){
+    reduceTime();
+})
+wrongFif.addEventListener("click", function(){
+    reduceTime();
+})
+wrongSix.addEventListener("click", function(){
+    reduceTime();
+})
+wrongSev.addEventListener("click", function(){
+    reduceTime();
+})
+wrongEig.addEventListener("click", function(){
+    reduceTime();
+})
+wrongNin.addEventListener("click", function(){
+    reduceTime();
 })
 function revealResults() {
     document.getElementById("results").style.display = 'block'
+    setCounterText();
+    renderResults();
 }
 function renderResults(){
-    scoreEl = localStorage.getItem("hs");
+    localStorage.setItem("points", currentScore);
 }
+reset.addEventListener("click", function(){
+    currentScore.innerHTML = "";
+    scoreEl.textContent = currentScore;
+})
 //event liistener
 //Add event listener to start button
 //onclick starttimer and reveal ques. 1
